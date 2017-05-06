@@ -1,0 +1,32 @@
+{
+  "name": "sequelizedburger",
+  "version": "1.0.0",
+  "description": "refactor of Eat Da Burger project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+   "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.13.0",
+    "method-override": "^2.3.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kdgiddyup/sequelizedBurger.git"
+  },
+  "author": "kdgiddyup",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kdgiddyup/sequelizedBurger/issues"
+  },
+  "homepage": "https://github.com/kdgiddyup/sequelizedBurger#readme"
+}

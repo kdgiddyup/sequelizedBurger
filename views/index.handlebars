@@ -16,7 +16,7 @@
     {{#each burgers}}
       {{#unless this.devoured}}
         <p class="burgerToEat">
-          <span class="burgerName">{{this.id}}. {{this.burger_name}}</span>
+          <span class="burgerName">{{this.id}}. {{this.name}}</span>
      
           <!-- devour it button -->
           <form class="devourButton" action="/{{this.id}}?_method=PUT" method="POST">
@@ -33,7 +33,7 @@
     {{#each burgers}}
       {{#if this.devoured}}
         <p class="burderDevoured">
-          <span class="burgerName">{{this.id}}. {{this.burger_name}}</span>
+          <span class="burgerName">{{this.id}}. {{this.name}}</span>
           </p>
       {{/if}}
   {{/each}}
