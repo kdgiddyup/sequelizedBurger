@@ -8,14 +8,9 @@ module.exports = function(app){
   app.get("/burgers/all", function(req, res) {
   // changed to sequelize findAll method
   db.Burger.findAll({
-     //include: [db.Customer]
+     include: [db.Customer]
 }).then(function(data){
-    var dataArray = [];
-    for (var i=0;i<data.length;i++){
-      dataArray.push(data[i].dataValues)
-    };
-    console.log(dataArray);
-    res.render("burgers", {burgers:dataArray});
+    res.render("index", {burgerData:data});
     });
   });
 
@@ -29,11 +24,7 @@ module.exports = function(app){
     include: [db.Customer]
   }).then(function(data){
     // render these burgers 
-    var dataArray = [];
-    for (var i=0;i<data.length;i++){
-      dataArray.push(data[i].dataValues)
-    };
-    res.render("burgers", {burgers:dataArray});
+    res.render("index", {burgerData:data});
   });
  });
 
