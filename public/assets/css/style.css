@@ -34,4 +34,6 @@ body {
   text-align: center;
   margin: 40px 0 0 0;
 }
-
+#customerName {
+  color: #000;
+}

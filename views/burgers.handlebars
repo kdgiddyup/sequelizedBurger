@@ -1,0 +1,30 @@
+  <!-- burger listings -->
+  <!-- new burgers column -->
+  <div class="col-lg-4 col-lg-offset-2 col-xs-10">
+    <h2>Burgers you love</h2>
+    {{#each burgers}}
+      {{#unless devoured}}
+        <p class="burgerToEat">
+          <span class="burgerName">{{id}}. {{name}}</span>
+     
+          <!-- devour it button -->
+          <form class="devourButton" action="/{{id}}?_method=PUT" method="POST">
+            <input type="hidden" name="devoured" value="true">
+            <button type="submit">Devour it!</button>
+          </form>
+          </p>     
+      {{/unless}}
+  {{/each}}
+</div>
+<!-- devoured burgers column -->
+<div class="col-lg-4 col-xs-10">
+    <h2>Burgers you've chomped</h2>
+    {{#each burgers}}
+      {{#if devoured}}
+        <p class="burgerDevoured">
+          <span class="burgerName">{{id}}. {{name}}</span>
+          </p>
+      {{/if}}
+  {{/each}}
+</div>
+</div> <!-- end burger listings row -->
